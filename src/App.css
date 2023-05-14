@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(55, 50, 71);
+}
+
+.App {
+  width: 50%;
+  margin: 0 auto;
+  padding-top: 3rem;
+}
+
+header {
+  max-width: 362px;
+  display: flex;
+  margin: 0 auto 2rem auto;
+  color: rgb(245, 245, 245);
+  justify-content: center;
+  align-items: center;
+}
+
+header img {
+  flex-basis: 20%;
+  object-fit: contain;
+}
+
+header h1 {
+  flex-basis: 80%;
+  font-size: clamp(2vw, 2rem, 6vw);
+}
+
+.formwrapper {
+  margin-bottom: 20px;
+}
+
+.inputwrapper {
+  display: flex;
+  justify-content: center;
+  gap: 0.125rem;
+}
+
+.tool {
+  height: 40px;
+  max-width: 260px;
+  width: 100%;
+  background-color: rgb(220, 208, 255);
+  border: 1px solid rgb(163, 134, 248);
+  color: rgb(44, 1, 65);
+  font-size: 1.125rem;
+  padding-left: 1rem;
+}
+
+.tool:focus {
+  outline: transparent;
+  border: 2px solid rgb(163, 134, 248);
+}
+
+.actionwrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.add {
+  height: 40px;
+  width: 100px;
+  background-color: rgb(138, 43, 226);
+  color: rgb(245, 245, 245);
+  border: 1px solid rgb(163, 134, 248);
+}
+
+.add:active {
+  background-color: rgb(101, 32, 167);
+}
+
+.update {
+  height: 40px;
+  width: 100px;
+  background-color: rgb(73, 189, 92);
+  color: rgb(245, 245, 245);
+  border: 1px solid rgb(21, 155, 21);
+}
+
+.update:active {
+  background-color: rgb(31, 175, 55);
+}
+
+.cancel {
+  height: 40px;
+  width: 100px;
+  background-color: rgb(92, 117, 231);
+  color: rgb(245, 245, 245);
+  border: 1px solid rgb(69, 89, 179);
+}
+
+.cancel:active {
+  background-color: rgb(76, 97, 192);
+}
+
+.listwrapper {
+  background-color: rgb(220, 208, 255);
+  max-width: 362px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.listwrapper>.confirmed::before {
+  content: '✔️';
+  position: absolute;
+  left: 105%;
+  margin-top: 15px;
+}
+
+
+
+.listwrapper>div {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 20px;
+  z-index: -1;
+}
+
+.listwrapper>div>div {
+  display: flex;
+  gap: 1rem;
+  min-height: 50px;
+  align-items: center;
+}
+
+.listwrapper>div:nth-child(odd) {
+  background-color: rgb(204, 187, 255);
+}
+
+.listwrapper button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+@media only screen and (max-width: 780px) {
+  .App {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 3rem;
+  }
+}
